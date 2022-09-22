@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; // ES6
+
 import { Component } from 'react';
 import { DivModal, DivOverlay } from './Modal.styled';
 
@@ -30,5 +32,9 @@ class Modal extends Component {
     );
   }
 }
-
+Modal.propTypes = {
+  alt: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  modalHandler: PropTypes.func.isRequired,
+};
 export default Modal;

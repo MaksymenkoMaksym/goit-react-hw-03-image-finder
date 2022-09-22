@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; // ES6
 import { Header, Form, Button, Input } from './Searchbar.styled';
 import { FcSearch } from 'react-icons/fc';
 const { Component } = require('react');
@@ -6,6 +7,7 @@ class Searchbar extends Component {
   state = {
     query: '',
   };
+
   onChangeHandler = e => {
     const value = e.target.value;
     const trimmedValue = value.trim().toLowerCase();
@@ -43,4 +45,7 @@ class Searchbar extends Component {
   }
 }
 
+Searchbar.propTypes = {
+  onSubmitHandler: PropTypes.func.isRequired,
+};
 export default Searchbar;

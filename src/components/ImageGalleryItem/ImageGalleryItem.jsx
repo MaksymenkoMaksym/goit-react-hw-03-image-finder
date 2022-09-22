@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; // ES6
+
 import { Li, Img } from './ImageGalleryItem.styled';
 
 const ImageGalleryItem = ({
@@ -17,4 +19,10 @@ const ImageGalleryItem = ({
   </Li>
 );
 
+ImageGalleryItem.propTypes = {
+  webformatURL: PropTypes.string,
+  largeImageURL: PropTypes.string,
+  alt: PropTypes.string,
+  modalHandler: PropTypes.func,
+};
 export default ImageGalleryItem;

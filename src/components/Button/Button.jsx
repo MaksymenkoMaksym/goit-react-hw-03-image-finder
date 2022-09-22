@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; // ES6
+
 import { ButtonLoad } from './Button.styled';
 
 const Button = ({ loadMoreHandler }) => (
@@ -6,4 +8,7 @@ const Button = ({ loadMoreHandler }) => (
   </ButtonLoad>
 );
 
+Button.propTypes = {
+  loadMoreHandler: PropTypes.func.isRequired,
+};
 export default Button;
