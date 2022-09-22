@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types'; // ES6
 import { Dna } from 'react-loader-spinner';
+import Div from './Loader.styled';
 const Loader = ({ isLoading }) => (
-  <Dna
-    visible={isLoading}
-    height="80"
-    width="80"
-    ariaLabel="dna-loading"
-    wrapperStyle={{}}
-    wrapperClass="dna-wrapper"
-  />
+  <Div>
+    <Dna
+      visible={isLoading}
+      height="800"
+      width="800"
+      ariaLabel="dna-loading"
+      wrapperStyle={{}}
+      wrapperClass="dna-wrapper"
+    />
+  </Div>
 );
 
 Loader.propTypes = {

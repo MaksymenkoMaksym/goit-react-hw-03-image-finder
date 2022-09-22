@@ -25,6 +25,9 @@ export class App extends Component {
     console.log('componentDidMount');
     const { query, page, total } = this.state;
     try {
+      setTimeout(() => {
+        console.log(2222);
+      }, 50000);
       const data = await api(query, page);
       const { hits, totalHits } = data;
       if (total !== totalHits) {
